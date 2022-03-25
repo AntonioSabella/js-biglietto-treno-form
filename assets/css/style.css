@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    background-color: rgba(207, 26, 26, 0.973);
+}
+  
+.container {
+    width: 800px;
+    margin: 2rem auto;
+}
+  
+.form_container {
+    text-align: center;
+}
+
+.form_container h1 {
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 2rem;
+    color: white;
+    text-transform: uppercase;
+}
+  
+.form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.596);
+    display: flex;
+    flex-wrap: wrap;
+}  
+
+.your_ticket {
+    background: white;
+    padding: 1rem;
+    margin-top: 1rem;
+    box-shadow: 2px 2px 2px black;
+    height: 260px;
+}  
+
+h2 {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 2rem;
+    text-transform: uppercase;
+}  
+
+.passegner_details {
+    width: 100%;
+    height: 200px;
+}  
+
+.ticket_box {
+    display: flex;
+}
+
+.col_30 {
+    height: 200px;
+    width: 30%;
+    padding: 1.5rem;
+    background-color: rgb(156, 152, 152);
+    position: relative;
+} 
+
+h3 {
+    text-transform: uppercase;
+}
+
+.col_70 {
+   height: 200px;
+   width:70%;
+   padding: 1.5rem;
+   background-color: transparent;
+   border-top: 1px solid grey;
+   border-bottom: 1px solid grey;
+   display: flex;
+}
+
+.col_25 {
+    height: 160px;
+    width: 25%;
+    padding: 1rem;
+    position: relative;
+}
+
+#ticket p {
+    position: absolute;
+    bottom: 0;
+    font-weight: 600;
+}
+
+.passenger_name {
+    position: absolute;
+    top: 5rem;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+  
+label {
+    display: block;
+    color: rgba(207, 26, 26, 0.973);
+    margin-bottom: 1rem;
+}
+  
+.w_33 {
+    width: calc(100% / 3);
+}
+  
+.w_100 {
+    width: 100%;
+}
+  
+.mt_3 {
+    margin-top: 3rem;
+}
+
+button {
+    background-color: rgb(158, 156, 156);
+    border: 2px solid rgba(207, 26, 26, 0.973);
+    color: rgba(207, 26, 26, 0.973);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+}
+  
+  
+input,
+select {
+  border-radius: 5px;
+  padding: 0.25rem;
+  border: 2px solid rgba(207, 26, 26, 0.973);
+}

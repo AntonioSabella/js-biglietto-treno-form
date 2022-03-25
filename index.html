@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Train ticket calculator</title>
+</head>
+<body>
+    
+    <main class="container">
+        <section class="form_container">
+            <h1>Calcola il prezzo del tuo biglietto </h1>
+            <div class="form">
+                <div class="w_33">
+                    <label for="full-name">Nome completo</label>
+                    <input type="text" name="full-name" id="full-name">
+                </div>
+                <!-- /.w_33 -->
+                <div class="w_33">
+                    <label for="distance">Km da percorrere</label>
+                    <input type="number" name="distance" id="distance">
+                </div>
+                <!-- /.w_33 -->
+                <div class="w_33">
+                    <label for="age">Fascia d'età</label>
+                    <select name="age" id="age">
+                        <option value="minorenne">Minorenne</option>
+                        <option value="maggiorenne">Maggiorenne</option>
+                        <option value="over65">Over 65</option>
+                    </select>
+                </div>
+                <!-- /.w_33 -->
+                <div class="w_100 mt_3">
+                    <button id="generate">Genera</button>
+                    <button id="cancel">Annulla</button>
+                </div>
+                <!-- /.w_100 -->
+                
+            </div>
+            <!-- /.form -->
+        </section>
+        <!-- /.form_container -->
+        <section class="train_ticket">
+            <h2>Il Tuo biglietto</h2>
+            <div id="ticket" class="your_ticket">
+                <div class="passenger_details">
+                    <h3>Dettaglio passeggeri</h3>
+                    <div class="ticket_box">
+                        <div class="col_30">
+                            <h3>Nome Passeggero</h3>
+                            <p class="passenger_name"></p>
+                        </div>
+                        <!-- /.col_30 -->
+                        <div class="col_70">
+                            <div class="col_25">
+                                <h3>Offerta</h3>
+                                <p class="offer_type"></p>
+                            </div>
+                            <!-- /.col_25 -->
+                            <div class="col_25">
+                                <h3>Carrozza</h3>
+                                <p class="carrozza"></p>
+                            </div>
+                            <!-- /.col_25 -->
+                            <div class="col_25">
+                                <h3>Codice CP</h3>
+                                <p class="cp_code"></p>
+                            </div>
+                            <!-- /.col_25 -->
+                            <div class="col_25">
+                                <h3>Costo Biglietto</h3>
+                                <p class="ticket_price"></p>
+                            </div>
+                            <!-- /.col_25 -->
+                        </div>
+                        <!-- /.col_70 -->
+                    </div>
+                    <!-- /.ticket_box -->
+                </div>
+                <!-- /.passenger_details -->
+            </div>
+        </section>
+        <!-- /.train_ticket -->
+    </main>
+    <!-- /.container -->
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
