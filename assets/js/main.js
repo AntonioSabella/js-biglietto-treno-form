@@ -1,22 +1,21 @@
 /* Impostazione variabili per elementi del mark-up */
-const fullNameInputElement = document.getElementById('full-name');
-const distanceInputElement = document.getElementById('distance');
-const ageSelectElement = document.getElementById('age');
-const generateButtonElement = document.getElementById('generate');
-const cancelButtonElement = document.getElementById('cancel');
+const f_name_input = document.getElementById('full-name');
+const distance_input = document.getElementById('distance');
+const age_select = document.getElementById('age');
+const generate_button = document.getElementById('generate');
+const cancel_button = document.getElementById('cancel');
 
 let info;
 let inform;
 
+//Chiedere all'utente il nome, il numero di chilometri che vuole percorrere e l'età mediante il form.
 
 // Dopo aver inserito i propri dati, cliccando su Genera, il software li mostra nel ticket
-generateButtonElement.addEventListener('click', function () {
+generate_button.addEventListener('click', function () {
   
-  //Chiedere all'utente il nome, il numero di chilometri che vuole percorrere e l'età.
-  
-  const fullName = fullNameInputElement.value;
-  const km_to_do = distanceInputElement.value;
-  const age = ageSelectElement.value;
+  const fullName = f_name_input.value;
+  const km_to_do = distance_input.value;
+  const age = age_select.value;
   //console.log(fullName, km_to_do, age);
 
   //Calcolo del prezzo totale del viaggio, a seconda che sia quello standard oppure soggetto a sconto del 20% 0 del 40%
@@ -33,7 +32,7 @@ generateButtonElement.addEventListener('click', function () {
     ticket_price = ticket_price - (ticket_price * 0.2);
     info = `${fullName} Ecco a te il 20% di sconto, giovane Skywalker. <br> Prezzo biglietto stellare: ${ticket_price.toFixed(2)} ${"€"}`;
     console.log(info);
-    inform = `Sconto del 20% giovane Skywalker`
+    inform = `Sconto del 20% giovane Skywalker✔`
     //console.log(ticket_price);
     //console.log(info);
 
@@ -41,7 +40,7 @@ generateButtonElement.addEventListener('click', function () {
     ticket_price = ticket_price - (ticket_price * 0.4)
     info = `${fullName} Saggio Yoda, per i tuoi servigi meriti uno sconto del 40%. <br> Prezzo biglietto stellare: ${ticket_price.toFixed(2)} ${"€"}`
     console.log(info);
-    inform = `Sconto del 40% Saggio Yoda`
+    inform = `Sconto del 40% Saggio Yoda🙌`
     //console.log(ticket_price);
     //console.log(info);
 
@@ -58,7 +57,7 @@ generateButtonElement.addEventListener('click', function () {
   const carrozza = Math.floor(Math.random() * 10) + 1;
   const cp_code = Math.floor(Math.random() * 100000);
 
-  document.querySelector('.passenger_name').innerHTML = fullNameInputElement.value;
+  document.querySelector('.passenger_name').innerHTML = fullName;
   document.querySelector('.offer_type').innerHTML = inform;
   document.querySelector('.carrozza').innerHTML = carrozza;
   document.querySelector('.cp_code').innerHTML = cp_code;
@@ -68,10 +67,10 @@ generateButtonElement.addEventListener('click', function () {
 
 
 // Il pulsante annulla rimuove tutte le informazioni dalla pagina per un ulteriore inserimento
-cancelButtonElement.addEventListener('click', function () {
-  fullNameInputElement.value = ""
-  ageSelectElement.value = "minorenne"
-  distanceInputElement.value = ""
+cancel_button.addEventListener('click', function () {
+  fullName = ""
+  age = "minorenne"
+  km_to_do = ""
 
   document.querySelector('.passenger_name').innerHTML = "";
   document.querySelector('.offer_type').innerHTML = "";
